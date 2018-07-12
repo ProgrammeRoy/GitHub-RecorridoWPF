@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DataBaseRecorridoAutoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="RecorridoHyundai30">
+          <Key>
+            <PropertyRef Name="IdRecorrido" />
+          </Key>
+          <Property Name="IdRecorrido" Type="int" Nullable="false" />
+          <Property Name="LugarSalida" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FechaSalida" Type="date" Nullable="false" />
+          <Property Name="HoraSalida" Type="time" Precision="7" Nullable="false" />
+          <Property Name="TanqueSalida(Km)" Type="int" Nullable="false" />
+          <Property Name="KilometrajeSalida(Km)" Type="int" Nullable="false" />
+          <Property Name="Ruta" Type="varchar" MaxLength="50" />
+          <Property Name="LugarLlegada" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FechaLlegada" Type="date" Nullable="false" />
+          <Property Name="HoraLlegada" Type="time" Precision="7" Nullable="false" />
+          <Property Name="TanqueLlegada(Km)" Type="int" Nullable="false" />
+          <Property Name="KilometrajeLlegada(Km)" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DataBaseRecorridoAutoModelStoreContainer">
+          <EntitySet Name="RecorridoHyundai30" EntityType="Self.RecorridoHyundai30" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DataBaseRecorridoAutoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DataBaseRecorridoAutoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="RecorridoHyundai30" EntityType="DataBaseRecorridoAutoModel.RecorridoHyundai30" />
+        </EntityContainer>
+        <EntityType Name="RecorridoHyundai30">
+          <Key>
+            <PropertyRef Name="IdRecorrido" />
+          </Key>
+          <Property Name="IdRecorrido" Type="Int32" Nullable="false" />
+          <Property Name="LugarSalida" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaSalida" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="HoraSalida" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="TanqueSalida_Km_" Type="Int32" Nullable="false" />
+          <Property Name="KilometrajeSalida_Km_" Type="Int32" Nullable="false" />
+          <Property Name="Ruta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LugarLlegada" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaLlegada" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="HoraLlegada" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="TanqueLlegada_Km_" Type="Int32" Nullable="false" />
+          <Property Name="KilometrajeLlegada_Km_" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DataBaseRecorridoAutoModelStoreContainer" CdmEntityContainer="DataBaseRecorridoAutoEntities">
+          <EntitySetMapping Name="RecorridoHyundai30">
+            <EntityTypeMapping TypeName="DataBaseRecorridoAutoModel.RecorridoHyundai30">
+              <MappingFragment StoreEntitySet="RecorridoHyundai30">
+                <ScalarProperty Name="KilometrajeLlegada_Km_" ColumnName="KilometrajeLlegada(Km)" />
+                <ScalarProperty Name="TanqueLlegada_Km_" ColumnName="TanqueLlegada(Km)" />
+                <ScalarProperty Name="HoraLlegada" ColumnName="HoraLlegada" />
+                <ScalarProperty Name="FechaLlegada" ColumnName="FechaLlegada" />
+                <ScalarProperty Name="LugarLlegada" ColumnName="LugarLlegada" />
+                <ScalarProperty Name="Ruta" ColumnName="Ruta" />
+                <ScalarProperty Name="KilometrajeSalida_Km_" ColumnName="KilometrajeSalida(Km)" />
+                <ScalarProperty Name="TanqueSalida_Km_" ColumnName="TanqueSalida(Km)" />
+                <ScalarProperty Name="HoraSalida" ColumnName="HoraSalida" />
+                <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+                <ScalarProperty Name="LugarSalida" ColumnName="LugarSalida" />
+                <ScalarProperty Name="IdRecorrido" ColumnName="IdRecorrido" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
